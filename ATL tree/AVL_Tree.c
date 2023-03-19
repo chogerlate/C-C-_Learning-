@@ -9,6 +9,7 @@ int max(int num1, int num2) { return (num1 > num2) ? num1 : num2; }
 
 // AVL tree node
 struct AVLNode {
+  
   int key;
   int height;
   struct AVLNode *left;
@@ -111,6 +112,8 @@ void displayTree(struct AVLNode *root) {
 
 // Search for an element with given key in the tree rooted at root
 struct AVLNode *searchElement(struct AVLNode *root, int key) {
+  
+
   if (root == NULL || root->key == key)
     return root;
   if (key < root->key)
